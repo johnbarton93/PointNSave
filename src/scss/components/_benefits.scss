@@ -1,0 +1,51 @@
+#benefits {
+    padding: 5rem 0 8rem;
+    background-color: $cream;
+}
+
+.benefits {
+    &__subtitle {
+        color: $yellow;
+    }
+    &__description {
+        width: 80%;
+        color: $light-green;
+    }
+    &__floating-quote {
+        border-radius: 20px;
+        padding: 1.5rem;
+        font-size: 1.25rem;
+        position: relative;
+        background: $green;
+        color: white;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .benefits {
+        &__floating-quote {
+            width: 35%;
+            margin-left: 2rem;
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .benefits {
+        &__floating-quote {
+            padding: 1rem;
+            font-size: 1rem; 
+        }
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .benefits {
+        &__floating-quote {
+            display: none;
+        }
+        &__description {
+            width: 100%;
+        }
+    }
+}

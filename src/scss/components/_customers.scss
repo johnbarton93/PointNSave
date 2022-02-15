@@ -1,0 +1,274 @@
+#current-customers {
+    padding: 3rem 0 0 0;
+}
+
+.current-customers {
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-basis: 1;
+        margin-bottom: 2rem;
+    }
+    &__logo {
+        display: block;
+        width: 250px;
+    }
+}
+
+#customers {
+    background-color: $dark-orange;
+    padding: 6rem 0 0 0;
+    color: white;
+}
+
+.customers {
+    &__wrapper {
+        display: flex;
+    }
+}
+.quote-section {
+    background-color: $light-green;
+    color:$dark-green;
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.quote{
+    &__title {
+        padding: 0 0 1rem 0;
+        font-weight: bold;
+    }
+    &__footer {
+    font-size: 1.25rem;
+    margin-top: 1rem;
+    font-style: normal;
+    text-align: right;
+    }
+    &__info {
+        color: $lighter-green;
+    }
+}
+.benefits{
+    &__quote {
+        font-size: 1.5rem;
+        font-style: italic;
+    }
+    &__floating-quote {
+    width: 30%;
+    float: right;
+    margin-top: 2rem;
+    padding: 1rem;
+    font-weight: bold;
+    &__footer {
+        font-weight:inherit;
+        font-style: italic;
+        text-align: right;
+    }
+    }
+    &__subtitle {
+        margin: 1rem 0 0.75rem;
+    }
+    &__description {
+        margin-bottom: 1.5rem;
+    }
+    &__source {
+        text-align: right;
+        color: #aaa;
+        font-style: italic;
+    }
+}
+.industry-selector {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    margin: 2rem auto;
+    border-width: 1px 0 1px 0;
+    border-style: solid;
+    border-color: $dark-green;
+    cursor: pointer;
+}
+.selector__button {
+    font-weight: bold;
+    color: $lighter-green;
+    font-size: 1rem;
+    padding: 0.7rem 0;
+    width: 100%;
+    text-align: center;
+    &:hover {
+        background-color: $light-green;
+    }
+}
+.selected {
+    color: white;
+}
+.industry-info {
+    display:flex;
+    justify-content: center;
+    min-height: 600px;
+    flex: 1;
+    &__card-wrapper {
+        width: 50%;
+    }
+    &__card {
+        padding: .75rem 1.5rem;
+        width: 60%;
+    }
+    &__title {
+        font-size: 1.6rem;
+        font-weight: bold;
+        margin: 0.5rem 0;
+    }
+    &__image {
+        max-width: 300px;
+    }
+    &__image-wrapper {
+        margin-top: 3rem;
+    }
+
+    &__bullet-points {
+        list-style: none;
+        margin: 1rem 0 .25rem;
+        color: $lighter-green;
+    }
+}
+.how-it-works {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 12rem;
+    color: $cream;
+    flex: 1;
+    &__title {
+        font-size: 1.6rem;
+        text-align: left;
+        font-weight: bold;
+        margin: 0.5rem 0;
+    }
+    &__text {
+        text-align: center;
+    }
+    &__img-wrapper {
+        min-height: 400px;
+    }
+}
+
+.bullet-point {
+    margin: 0.75rem 0;
+    color: $cream;
+    &__check {
+        display: inline-block;
+        margin: 0 .35rem;
+    }
+}
+
+.app-store-btns {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem 0;
+}
+
+@media screen and (max-width: 1200px) {
+    .industry-info {
+        &__card {
+            width: 80%;
+            padding: .25rem;
+        }
+    }
+    .dashboard {
+        flex-wrap: nowrap;
+        &__info {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .industry-info {
+        &__card {
+            width: 100%;
+            padding: .25rem;
+        }
+        padding-bottom: 4rem;
+    }
+
+    .industry-selector {
+        width: 60%;
+    }
+
+    .selector__button {
+        font-size: 0.8rem;
+    }
+
+    .dashboard {
+        &__title {
+            text-align: center;
+        }
+        &__info {
+            padding-bottom: 3rem;
+            width: 70%;
+        }
+        &__video {
+            width: 80%;
+        }
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .customers__wrapper {
+        flex-direction: column;
+    }
+    .slide-btn.next {
+        right: -140px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .industry-info {
+        padding: 0;
+        flex-wrap: wrap;
+        &__card-wrapper {
+            text-align: center;
+            width:100%;
+            padding: 0;
+            margin: 1rem auto;
+        }
+        &__card {
+            padding: 1rem;
+        }
+        &__image-wrapper {
+            margin: 1rem auto;
+        }
+    }
+    .industry-selector {
+        width: 70%;
+    }
+    .app-store-btns {
+        justify-content: center;
+    }
+
+    .how-it-works{
+        &__title {
+            text-align: center;
+        }
+        &__img {
+            display: none;
+        }
+    }
+   
+}
+
+@media screen and (max-width: 400px) {
+    .industry-selector {
+        width: 80%;
+    }
+    .selector__button {
+        font-size: 0.65rem;
+    }
+    .app-store-btns {
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
