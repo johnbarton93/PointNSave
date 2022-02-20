@@ -18,6 +18,24 @@ input {
 	height: 45px;
 }
 
+input.app {
+  height: auto;
+  font-family: Roboto;
+  font-size: 25px;
+  color: #000;
+  border-radius: 0;
+  border: 0;
+  padding: 0;
+}
+
+@media (max-width:768px){
+  input.app {font-size: 22px;margin-top: 25px;}
+}
+
+@media (max-width:576px){
+  input.app {font-size: 20px;}
+}
+
 textarea {
 	height: 180px;
 	line-height: 1.6;
@@ -25,7 +43,21 @@ textarea {
     margin-top: 12px;
 }
 
-input:focus, input:hover {
+.line textarea {
+	font-size: 15px;
+	padding: 10px 13px;
+	margin-top: 0;
+}
+
+.line textarea.h80 {
+	height: 80px;
+}
+
+.line textarea.h190 {
+	height: 200px;
+}
+
+input:focus, input:hover, textarea:focus, textarea:hover {
 	border: 1px solid #b71f2a;
 	outline: none;
 }
