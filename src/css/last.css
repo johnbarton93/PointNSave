@@ -141,7 +141,7 @@
     transform: none;
 }
 
-.block-button {
+.block-button, .block-button2 {
 	position: absolute;
 	z-index: 500;
 	height: 50px;
@@ -152,11 +152,53 @@
 	padding: 10px;
 }
 
-.block-button p {
+.block-button p, .block-button2 p {
     font-size: 10px;
     line-height: 1.5;
     color: #fff;
     text-align: center;
+}
+/*
+.fsmall.block-button p {
+	font-size: 9px;
+	line-height: 1.6;
+}
+*/
+
+.res-sub {
+	width: 100%;
+	height: 29px;
+    position: absolute;
+    z-index: 300;
+    top: 162px;
+    font-family: HelveticaNeueLTStd-Bd;
+    font-size: 11px;
+    line-height: 1.3;
+    color: #000;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.res-title {
+	width: 100%;
+    position: absolute;
+    z-index: 300;
+    top: 204px;
+    font-family: HelveticaNeueLTStd-Bd;
+    font-size: 11px;
+    color: #031055;
+    text-align: center;
+}
+
+.res-text {
+	height: 123px;
+	position: absolute;
+    z-index: 300;
+    bottom: 97px;
+    font-size: 11px;
+    text-align: center;
+    line-height: 1.4;
+    overflow: hidden;
 }
 
 .block1 {
