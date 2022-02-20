@@ -98,6 +98,16 @@
 	bottom: 50px;
 }
 
+@media(max-width: 1260px) {
+	.squares2 {
+	  bottom: 25px;
+	}
+	.w100 {
+	  bottom: 25px;
+    }
+}
+
+
 .squares4 {
 	justify-content: flex-start;
 	bottom: 20px;
@@ -157,7 +167,7 @@
 }
 
 
-@media(max-width: 576px) {
+@media(max-width: 768px) {
 	.template-block.right {margin-top: 50px;}
 }
 
@@ -184,8 +194,12 @@
 	max-height: 47px;
 }
 
-@media(max-width: 768px) {
+@media(max-width: 1260px) {
 	.template-block {margin-right: 0;}
+	.template-logo {
+		top: 50px;
+		padding: 0 15px;
+	}
 }
 
 .template-block:hover img {
