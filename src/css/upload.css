@@ -26,6 +26,23 @@
      z-index: -10;
 }
 
+.upload-container .small-logo {
+     display: block;
+     background: #fff;
+     background-image: none;
+     cursor: pointer;
+}
+
+.upload-container .small-logo:hover {
+     background: #fff;
+     background-image: none;
+}
+
+.small-logo img {
+     max-height: 45px;
+     margin-top: 0;
+}
+
 :focus {
      outline: -webkit-focus-ring-color auto 5px;
 }
