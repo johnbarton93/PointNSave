@@ -8,6 +8,7 @@
   <title>Features | Point'N Save</title>
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/create.css">
+  <link rel="stylesheet" href="css/form.css">
   <link rel="stylesheet" href="css/upload.css">
   <link rel="stylesheet" href="css/colors.css">
   <link rel="icon" href="img/favicon.png" type="image/x-icon" />
@@ -16,14 +17,22 @@
 
     <header>
       <div class="container fl">
-        <a href="index.html" class="logo fl">
+        <a href="https://www.pointnsave.com" class="logo fl">
           <img src="img/logo.png" class="mx" alt="logo" />
         </a>
         <div class="name fl">
-          <div class="small-logo">
-             <img src="img/logo2.jpg" alt="logo 2" />
+      <div class="upload-container">
+            <div class="upload">
+              <label for="file3" class="small-logo">
+                <img src="img/logo2.jpg" alt="logo 2" />
+              </label>
+              <input type="file" id="file3" name="file3" class="file"  />
+            </div>
+            <div id="outputlogo" class="output" style="display: none;">
+            </div>
           </div>
-          <h4>Appliation Name here</h4>
+
+          <input type="text" id="tab30" name="tab30" value="Appliation Name here" class="tab30 app tabinp tabtext">
         </div>
       </div>
     </header>
@@ -35,7 +44,7 @@
           <div class="container">
             <ul itemscope="" itemtype="http://schema.org/BreadcrumbList" class="fl">
               <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-                <a href="index.html" title="Home" itemprop="item"><span itemprop="name">Home</span><meta itemprop="position" content="0"></a>
+                <a href="https://www.pointnsave.com" title="Home" itemprop="item"><span itemprop="name">Home</span><meta itemprop="position" content="0"></a>
               </li>
               <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
                 <a href="#" title="Building Application" itemprop="item"><span itemprop="name">Building Application</span><meta itemprop="position" content="1"></a>
@@ -99,14 +108,21 @@
                          <div class="flex11 item">
                            <p class="tab">Map</p>
                          </div>
+
                          <div class="funcs fl">
                            <div class="func plus">
                              <svg width="15" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg>
                            </div>
-                           <div class="func">
+                           <div class="func prompt">
                             <svg width="22" height="22" id="info" data-name="info" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.0012 22.0011"><defs><style>.cls-1{fill-rule:evenodd;}</style></defs><title>info</title><path class="cls-1" d="M12.473,14.9465l-.93.4051,1.2094-6.1391a.8831.8831,0,0,0-1.3-.94L9.2123,9.5341a.8832.8832,0,1,0,.867,1.5391l.57-.3212L9.4851,16.6634a.883.883,0,0,0,1.2186.98l2.4745-1.0778a.8831.8831,0,1,0-.7052-1.6193Zm-.5864-8.3228a1.258,1.258,0,1,0-.8929-.3684A1.2653,1.2653,0,0,0,11.8866,6.6237ZM11,0A11.0006,11.0006,0,1,0,22.0008,11,11.0131,11.0131,0,0,0,11,0Zm0,19.9827A8.9821,8.9821,0,1,1,19.9823,11,8.9923,8.9923,0,0,1,11,19.9823Z" transform="translate(0.0004 0.0004)"/></svg>
                            </div>
                          </div>
+
+                         <div class="information">
+                          <p><strong>Map</strong> - The “Map” feature is a great way to draw attention to businesses or points of interest within your app. Users can easily access contact information, watch an about us video, and even access the social media of that business. </p>
+                         </div>
+
+
                         </div>
 
                         <div class="line fl">
@@ -117,9 +133,13 @@
                            <div class="func plus">
                              <svg width="15" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg>
                            </div>
-                           <div class="func">
+                           <div class="func prompt">
                             <svg width="22" height="22" id="info" data-name="info" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.0012 22.0011"><defs><style>.cls-1{fill-rule:evenodd;}</style></defs><title>info</title><path class="cls-1" d="M12.473,14.9465l-.93.4051,1.2094-6.1391a.8831.8831,0,0,0-1.3-.94L9.2123,9.5341a.8832.8832,0,1,0,.867,1.5391l.57-.3212L9.4851,16.6634a.883.883,0,0,0,1.2186.98l2.4745-1.0778a.8831.8831,0,1,0-.7052-1.6193Zm-.5864-8.3228a1.258,1.258,0,1,0-.8929-.3684A1.2653,1.2653,0,0,0,11.8866,6.6237ZM11,0A11.0006,11.0006,0,1,0,22.0008,11,11.0131,11.0131,0,0,0,11,0Zm0,19.9827A8.9821,8.9821,0,1,1,19.9823,11,8.9923,8.9923,0,0,1,11,19.9823Z" transform="translate(0.0004 0.0004)"/></svg>
                            </div>
+                         </div>
+
+                         <div class="information">
+                          <p><strong>Events</strong> - The "Events" feature is a great way for you to engage your users with easy event promotion. Add upcoming that allow users to add the event to their calendar and register for the event!</p>
                          </div>
                         </div>
 
@@ -132,9 +152,12 @@
                            <div class="func plus">
                              <svg width="15" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg>
                            </div>
-                           <div class="func">
+                           <div class="func prompt">
                             <svg width="22" height="22" id="info" data-name="info" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.0012 22.0011"><defs><style>.cls-1{fill-rule:evenodd;}</style></defs><title>info</title><path class="cls-1" d="M12.473,14.9465l-.93.4051,1.2094-6.1391a.8831.8831,0,0,0-1.3-.94L9.2123,9.5341a.8832.8832,0,1,0,.867,1.5391l.57-.3212L9.4851,16.6634a.883.883,0,0,0,1.2186.98l2.4745-1.0778a.8831.8831,0,1,0-.7052-1.6193Zm-.5864-8.3228a1.258,1.258,0,1,0-.8929-.3684A1.2653,1.2653,0,0,0,11.8866,6.6237ZM11,0A11.0006,11.0006,0,1,0,22.0008,11,11.0131,11.0131,0,0,0,11,0Zm0,19.9827A8.9821,8.9821,0,1,1,19.9823,11,8.9923,8.9923,0,0,1,11,19.9823Z" transform="translate(0.0004 0.0004)"/></svg>
                            </div>
+                         </div>
+                         <div class="information">
+                          <p><strong>Resources</strong> - The "Resources" feature allows you to highlight the key resources in your community. This feature is categorized into three tiers. For example, Resource categories, Resource names, and Resource descriptions. </p>
                          </div>
                         </div>
 
@@ -147,36 +170,140 @@
                            <div class="func plus">
                              <svg width="15" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg>
                            </div>
-                           <div class="func">
+                           <div class="func prompt">
                             <svg width="22" height="22" id="info" data-name="info" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.0012 22.0011"><defs><style>.cls-1{fill-rule:evenodd;}</style></defs><title>info</title><path class="cls-1" d="M12.473,14.9465l-.93.4051,1.2094-6.1391a.8831.8831,0,0,0-1.3-.94L9.2123,9.5341a.8832.8832,0,1,0,.867,1.5391l.57-.3212L9.4851,16.6634a.883.883,0,0,0,1.2186.98l2.4745-1.0778a.8831.8831,0,1,0-.7052-1.6193Zm-.5864-8.3228a1.258,1.258,0,1,0-.8929-.3684A1.2653,1.2653,0,0,0,11.8866,6.6237ZM11,0A11.0006,11.0006,0,1,0,22.0008,11,11.0131,11.0131,0,0,0,11,0Zm0,19.9827A8.9821,8.9821,0,1,1,19.9823,11,8.9923,8.9923,0,0,1,11,19.9823Z" transform="translate(0.0004 0.0004)"/></svg>
                            </div>
                          </div>
+                         <div class="information">
+                          <p><strong>Directory</strong> - The "Directory" feature allows you to highlight the key businesses in your community. This feature is categorized into three tiers as well. For example, Business categories, Business names, and Business descriptions.</p>
+                         </div>
                         </div>
 
-                        <div class="note fl">
+                        <div class="note fl notedesc">
                           <img src="img/notice.svg" alt="notice" />
                           <div class="note-text flex11">
                             <h6>Don't see a feature you want?</h6>
-                            <p>Please write comment in final look screen. <a href="#">more...</a></p>
+                            <p>Please write comment in final look screen. <a href="final-look.html">more...</a></p>
                         </div>
                        </div>
 
                      </div>
 
-                     
-                      
                      </div>
 
                   </div>
+
+                  <!--
                   <div class="w30 col2">
                     <div class="template-block right">
                       <div class="template">
                         <img src="img/features.png" alt="features image" />
                       </div>
                     </div>
+                  </div>-->
+
+                  <div class="w30 col2">
+                    <div class="template-block right">
+                      <div class="template tbg">
+                        <img src="img/empty.png" alt="design image" />
+
+                        <div id="template1-cont" class="cont">
+                          <div class="tpad">
+                            <div id="tlogo1" class="template-logo">
+                            </div>
+                            <div class="squares squares2">
+                              <div class="square tab1-square">
+                                <p class="tab-name tab1">Tab 1</p>
+                              </div>
+                              <div class="square tab2-square">
+                                <p class="tab-name tab2">Tab 2</p>
+                              </div>
+                              <div class="square tab3-square">
+                                <p class="tab-name tab3">Tab 3</p>
+                              </div>
+                              <div class="square tab4-square">
+                                <p class="tab-name tab4">Tab 4</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div id="template2-cont" class="cont">
+                          <div class="tpad">
+                            <div id="tlogo2" class="template-logo">
+                            </div>
+                            <div class="squares">
+                              <div class="square burger">
+                                <div class="blines">
+                                  <div class="bline"></div>
+                                  <div class="bline"></div>
+                                  <div class="bline"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div id="template3-cont" class="cont">
+                          <div class="tpad">
+                            <div id="tlogo3" class="template-logo">
+                            </div>
+                            <div class="squares w100">
+                              <div class="square tab1-square">
+                                <p class="tab-name tab1">Tab 1</p>
+                              </div>
+                              <div class="square tab2-square">
+                                <p class="tab-name tab2">Tab 2</p>
+                              </div>
+                              <div class="square tab3-square">
+                                <p class="tab-name tab3">Tab 3</p>
+                              </div>
+                              <div class="square tab4-square">
+                                <p class="tab-name tab4">Tab 4</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div id="template4-cont" class="cont">
+                          <div class="tpad">
+                            <div id="tlogo4" class="template-logo">
+                            </div>
+                            <div class="squares squares4">
+                              <div class="square tab1-square">
+                                <p class="tab-name tab1">Tab 1</p>
+                              </div>
+                              <div class="square tab2-square">
+                                <p class="tab-name tab2">Tab 2</p>
+                              </div>
+                              <div class="square tab3-square">
+                                <p class="tab-name tab3">Tab 3</p>
+                              </div>
+                              <div class="square tab4-square">
+                                <p class="tab-name tab4">Tab 4</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                      <p class="title chtitle mt15">Four Square Menu</p>
+                    </div>
                   </div>
                 </div>
+
+                <div class="notemob">
+                  <div class="note fl">
+                    <img src="img/notice.svg" alt="notice" />
+                    <div class="note-text flex11">
+                      <h6>Don't see a feature you want?</h6>
+                      <p>Please write comment in final look screen. <a href="final-look.html">more...</a></p>
+                    </div>
+                  </div>
+                </div>
+
               </div>
+
             </div>
           </div>
         </div>
@@ -196,429 +323,14 @@
 
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script>
-      /*jslint */
-/*global module: true, exports: true, define: false */
-
-/**
- * jaaulde-cookies.js
- *
- * Copyright (c) 2005-2015, Jim Auldridge MIT License
- *
- */
-
-/**
- *
- * @param {object} scope - a reference to the call scope
- * @param {undefined} undef - an undefined variable for comparison checks
- * @returns {void}
- */
-(function (scope, undef) {
-    'use strict';
-
-    /**
-     * IIFE for injecting cookies module into whichever require/scope is in use
-     *
-     * @param {string} name - the name of module being created
-     * @param {function} definition - function which produces and returns the created module
-     * @returns {void}
-     */
-    (function (name, definition) {
-        if (typeof module === 'object' && module !== null && module.exports) {
-            module.exports = exports = definition();
-        } else if (typeof define === 'function' && define.amd) {
-            define(definition);
-        } else {
-            scope[name] = definition();
-        }
-    }('cookies', function () {
-            /* localize natives */
-        var document = scope.document,
-            /* opts and support */
-            default_options = {
-                expires: null,
-                path: '/',
-                domain: null,
-                secure: false
-            },
-            /**
-             *
-             * @access private
-             * @param {string} msg
-             * @returns {void}
-             */
-            warn = function (msg) {
-                if (typeof scope.console === 'object' && scope.console !== null && typeof scope.console.warn === 'function') {
-                    warn = function (msg) {
-                        scope.console.warn(msg);
-                    };
-                    warn(msg);
-                }
-            },
-            /**
-             *
-             * @param {object} o
-             * @returns {object}
-             */
-            resolveOptions = function (o) {
-                var r,
-                    e;
-
-                if (typeof o !== 'object' || o === null) {
-                    r = default_options;
-                } else {
-                    r = {
-                        expires: default_options.expires,
-                        path: default_options.path,
-                        domain: default_options.domain,
-                        secure: default_options.secure
-                    };
-
-                    /*
-                     * I've been very finicky about the name and format of the expiration option over time,
-                     * so I'm accounting for older styles to maintain backwards compatibility. Preferably it
-                     * will be called "expires" and will be an instance of Date
-                     */
-                    if (typeof o.expires === 'object' && o.expires instanceof Date) {
-                        r.expires = o.expires;
-                    } else if (typeof o.expires_at === 'object' && o.expires_at instanceof Date) {
-                        r.expires = o.expires_at;
-                        warn('Cookie option "expires_at" has been deprecated. Rename to "expires". Support for "expires_at" will be removed in a version to come.');
-                    } else if (typeof o.expiresAt === 'object' && o.expiresAt instanceof Date) {
-                        r.expires = o.expiresAt;
-                        warn('Cookie option "expiresAt" has been deprecated. Rename to "expires". Support for "expiresAt" will be removed in a version to come.');
-                    } else if (typeof o.hoursToLive === 'number' && o.hoursToLive !== 0) {
-                        e = new Date();
-                        e.setTime(e.getTime() + (o.hoursToLive * 60 * 60 * 1000));
-                        r.expires = e;
-                        warn('Cookie option "hoursToLive" has been deprecated. Rename to "expires" and prodvide a Date instance (see documentation). Support for "hoursToLive" will be removed in a version to come.');
-                    }
-
-                    if (typeof o.path === 'string' && o.path !== '') {
-                        r.path = o.path;
-                    }
-
-                    if (typeof o.domain === 'string' && o.domain !== '') {
-                        r.domain = o.domain;
-                    }
-
-                    if (o.secure === true) {
-                        r.secure = o.secure;
-                    }
-                }
-
-                return r;
-            },
-            /**
-             *
-             * @access private
-             * @param {object} o
-             * @returns {string}
-             */
-            cookieOptions = function (o) {
-                o = resolveOptions(o);
-
-                return ([
-                    (typeof o.expires === 'object' && o.expires instanceof Date ? '; expires=' + o.expires.toGMTString() : ''),
-                    ('; path=' + o.path),
-                    (typeof o.domain === 'string' ? '; domain=' + o.domain : ''),
-                    (o.secure === true ? '; secure' : '')
-                ].join(''));
-            },
-            /**
-             *
-             * @access private
-             * @param {string} s
-             * @returns {string}
-             */
-            trim = (function () {
-                var trim_def;
-
-                /* Some logic for `trim` and `isNaN` borrowed from http://jquery.com/ */
-                if (String.prototype.trim) {
-                    trim_def = function (s) {
-                        return String.prototype.trim.call(s);
-                    };
-                } else {
-                    trim_def = (function () {
-                        var l,
-                            r;
-
-                        l = /^\s+/;
-                        r = /\s+$/;
-
-                        return function (s) {
-                            return s.replace(l, '').replace(r, '');
-                        };
-                    }());
-                }
-
-                return trim_def;
-            }()),
-            /**
-             *
-             * @access private
-             * @param {mixed} v
-             * @returns {boolean}
-             */
-            isNaN = (function () {
-                var p = /\d/,
-                    native_isNaN = scope.isNaN;
-
-                return function (v) {
-                    return (v === null || !p.test(v) || native_isNaN(v));
-                };
-            }()),
-            /**
-             *
-             * @access private
-             * @returns {object}
-             */
-            parseCookies = (function () {
-                var parseJSON,
-                    p;
-
-                if (JSON && typeof JSON.parse === 'function') {
-                    parseJSON = function (s) {
-                        var r = null;
-
-                        if (typeof s === 'string' && s !== '') {
-                            s = trim(s);
-
-                            if (s !== '') {
-                                try {
-                                    r = JSON.parse(s);
-                                } catch (e1) {
-                                    r = null;
-                                }
-                            }
-                        }
-
-                        return r;
-                    };
-                } else {
-                    parseJSON = function () {
-                        return null;
-                    };
-                }
-
-                p = new RegExp('^(?:\\{.*\\}|\\[.*\\])$');
-
-                return function () {
-                    var c = {},
-                        s1 = document.cookie.split(';'),
-                        q = s1.length,
-                        i,
-                        s2,
-                        n,
-                        v,
-                        vv;
-
-                    for (i = 0; i < q; i += 1) {
-                        s2 = s1[i].split('=');
-
-                        n = trim(s2.shift());
-                        if (s2.length >= 1) {
-                            v = s2.join('=');
-                        } else {
-                            v = '';
-                        }
-
-                        try {
-                            vv = decodeURIComponent(v);
-                        } catch (e2) {
-                            vv = v;
-                        }
-
-                        /* Logic borrowed from http://jquery.com/ dataAttr method */
-                        try {
-                            vv = (vv === 'true')
-                                ? true : (vv === 'false')
-                                    ? false : !isNaN(vv)
-                                        ? parseFloat(vv) : p.test(vv)
-                                            ? parseJSON(vv) : vv;
-                        } catch (ignore) {}
-
-                        c[n] = vv;
-                    }
-
-                    return c;
-                };
-            }());
-
-        return {
-            /**
-             * get - get one, several, or all cookies
-             *
-             * @access public
-             * @static
-             * @param {mixed} n {string} name of single cookie
-             *                  {array} list of multiple cookie names
-             *                  {void} if you want all cookies
-             * @return {mixed} type/value of cookie as set
-             *                 {null} if only one cookie is requested and is not found
-             *                 {object} hash of multiple or all cookies (if multiple or all requested)
-             */
-            get: function (n) {
-                var r,
-                    i,
-                    c = parseCookies();
-
-                if (typeof n === 'string') {
-                    r = (c[n] !== undef) ? c[n] : null;
-                } else if (typeof n === 'object' && n !== null) {
-                    r = {};
-
-                    for (i in n) {
-                        if (Object.prototype.hasOwnProperty.call(n, i)) {
-                            if (c[n[i]] !== undef) {
-                                r[n[i]] = c[n[i]];
-                            } else {
-                                r[n[i]] = null;
-                            }
-                        }
-                    }
-                } else {
-                    r = c;
-                }
-
-                return r;
-            },
-            /**
-             * filter - get array of cookies whose names match the provided RegExp
-             *
-             * @access public
-             * @static
-             * @param {RegExp} p The regular expression to match against cookie names
-             * @return {object} hash of cookies whose names match the RegExp
-             */
-            filter: function (p) {
-                var n,
-                    r = {},
-                    c = parseCookies();
-
-                if (typeof p === 'string') {
-                    p = new RegExp(p);
-                }
-
-                for (n in c) {
-                    if (Object.prototype.hasOwnProperty.call(c, n) && n.match(p)) {
-                        r[n] = c[n];
-                    }
-                }
-
-                return r;
-            },
-            /**
-             * set - set or delete a cookie with desired options
-             *
-             * @access public
-             * @static
-             * @param {string} n name of cookie to set
-             * @param {mixed} v Any JS value. If not a string, will be JSON encoded (http://code.google.com/p/cookies/wiki/JSON)
-             *                  {null} to delete
-             * @param {object} o optional list of cookie options to specify
-             * @return {void}
-             */
-            set: function (n, v, o) {
-                if (typeof o !== 'object' || o === null) {
-                    o = {};
-                }
-
-                if (v === undef || v === null) {
-                    v = '';
-                    o.expires = new Date();
-                    o.expires.setFullYear(1978);
-                } else {
-                    /* Logic borrowed from http://jquery.com/ dataAttr method and reversed */
-                    v = (v === true)
-                        ? 'true' : (v === false)
-                            ? 'false' : !isNaN(v)
-                                ? String(v) : v;
-
-                    if (typeof v !== 'string') {
-                        if (typeof JSON === 'object' && JSON !== null && typeof JSON.stringify === 'function') {
-                            v = JSON.stringify(v);
-                        } else {
-                            throw new Error('cookies.set() could not be serialize the value');
-                        }
-                    }
-                }
-
-                document.cookie = n + '=' + encodeURIComponent(v) + cookieOptions(o);
-            },
-            /**
-             * del - delete a cookie (domain and path options must match those with which the cookie was set; this is really an alias for set() with parameters simplified for this use)
-             *
-             * @access public
-             * @static
-             * @param {mixed} n {string} name of cookie to delete
-             *                  {boolean} true to delete all
-             * @param {object} o optional list of cookie options to specify (path, domain)
-             * @return {void}
-             */
-            del: function (n, o) {
-                var d = {},
-                    i;
-
-                if (typeof o !== 'object' || o === null) {
-                    o = {};
-                }
-
-                if (typeof n === 'boolean' && n === true) {
-                    d = this.get();
-                } else if (typeof n === 'string') {
-                    d[n] = true;
-                }
-
-                for (i in d) {
-                    if (Object.prototype.hasOwnProperty.call(d, i) && typeof i === 'string' && i !== '') {
-                        this.set(i, null, o);
-                    }
-                }
-            },
-            /**
-             * test - test whether the browser is accepting cookies
-             *
-             * @access public
-             * @static
-             * @return {boolean}
-             */
-            test: function () {
-                var r = false,
-                    n = 'test_cookies_jaaulde_js',
-                    v = 'data';
-
-                this.set(n, v);
-
-                if (this.get(n) === v) {
-                    this.del(n);
-                    r = true;
-                }
-
-                return r;
-            },
-            /**
-             * setOptions - set default options for calls to cookie methods
-             *
-             * @access public
-             * @static
-             * @param {object} o list of cookie options to specify
-             * @return {void}
-             */
-            setOptions: function (o) {
-                if (typeof o !== 'object') {
-                    o = null;
-                }
-
-                default_options = resolveOptions(o);
-            }
-        };
-    }));
-}(this));
-    </script>
-    <script src="js/script.js"></script>
     <script src="js/upload.js"></script>
+    <script src='https://dev3.invacont.net/test57/js/jaaulde-cookies.js'></script>
+    <script src='js/uploadfirst.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/spectrum-colorpicker2/dist/spectrum.min.js"></script>
+    <script src='js/script.js'></script>
+    <script src='js/colors.js'></script>
+    
+
 
   </body>
 </html>
