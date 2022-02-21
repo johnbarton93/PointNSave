@@ -8,6 +8,7 @@
   <title>Design | Point'N Save</title>
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/create.css">
+  <link rel="stylesheet" href="css/form.css">
   <link rel="stylesheet" href="css/upload.css">
   <link rel="stylesheet" href="css/form.css">
 
@@ -20,14 +21,25 @@
 
     <header>
       <div class="container fl">
-        <a href="index.html" class="logo fl">
+        <a href="https://www.pointnsave.com" class="logo fl">
           <img src="img/logo.png" class="mx" alt="logo" />
         </a>
         <div class="name fl">
-          <div class="small-logo">
-             <img src="img/logo2.jpg" alt="logo 2" />
+
+      <div class="upload-container">
+            <div class="upload">
+              <label for="file3" class="small-logo">
+                <img src="img/logo2.jpg" alt="logo 2" />
+              </label>
+              <input type="file" id="file3" name="file3" class="file"  />
+            </div>
+            <div id="outputlogo" class="output" style="display: none;">
+            </div>
           </div>
-          <h4>Appliation Name here</h4>
+
+        
+          <input type="text" id="tab30" name="tab30" value="Appliation Name here" class="tab30 app tabinp tabtext">
+          <!--<h4>Appliation Name here</h4>-->
         </div>
       </div>
     </header>
@@ -39,7 +51,7 @@
           <div class="container">
             <ul itemscope="" itemtype="http://schema.org/BreadcrumbList" class="fl">
               <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-                <a href="index.html" title="Home" itemprop="item"><span itemprop="name">Home</span><meta itemprop="position" content="0"></a>
+                <a href="https://www.pointnsave.com" title="Home" itemprop="item"><span itemprop="name">Home</span><meta itemprop="position" content="0"></a>
               </li>
               <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
                 <a href="#" title="Building Application" itemprop="item"><span itemprop="name">Building Application</span><meta itemprop="position" content="1"></a>
@@ -103,15 +115,16 @@
                            <p>Upload logo</p>
                          </div>
                          <div class="w319 item">
+
                           <div class="upload-container">
                             <div class="upload">
                               <label for="file" class="upl-downl">Upload logo</label>
                               <input type="file" id="file" name="file" class="file"  />
                             </div>
                             <div id="output" class="output">
-
                             </div>
                           </div>
+
                          </div>
                        </div>
 
@@ -120,15 +133,16 @@
                            <p>Upload background image</p>
                          </div>
                          <div class="w319 item">
+
                           <div class="upload-container">
                             <div class="upload">
                               <label for="file2" class="upl-downl">Upload background</label>
                               <input type="file" id="file2" name="file2" class="file"  />
                             </div>
                             <div id="output2" class="output">
-
                             </div>
                           </div>
+
                          </div>
                        </div>
 
@@ -346,532 +360,9 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="js/upload.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/spectrum-colorpicker2/dist/spectrum.min.js"></script>
-    <script>
-      /*jslint */
-/*global module: true, exports: true, define: false */
-
-/**
- * jaaulde-cookies.js
- *
- * Copyright (c) 2005-2015, Jim Auldridge MIT License
- *
- */
-
-/**
- *
- * @param {object} scope - a reference to the call scope
- * @param {undefined} undef - an undefined variable for comparison checks
- * @returns {void}
- */
-(function (scope, undef) {
-    'use strict';
-
-    /**
-     * IIFE for injecting cookies module into whichever require/scope is in use
-     *
-     * @param {string} name - the name of module being created
-     * @param {function} definition - function which produces and returns the created module
-     * @returns {void}
-     */
-    (function (name, definition) {
-        if (typeof module === 'object' && module !== null && module.exports) {
-            module.exports = exports = definition();
-        } else if (typeof define === 'function' && define.amd) {
-            define(definition);
-        } else {
-            scope[name] = definition();
-        }
-    }('cookies', function () {
-            /* localize natives */
-        var document = scope.document,
-            /* opts and support */
-            default_options = {
-                expires: null,
-                path: '/',
-                domain: null,
-                secure: false
-            },
-            /**
-             *
-             * @access private
-             * @param {string} msg
-             * @returns {void}
-             */
-            warn = function (msg) {
-                if (typeof scope.console === 'object' && scope.console !== null && typeof scope.console.warn === 'function') {
-                    warn = function (msg) {
-                        scope.console.warn(msg);
-                    };
-                    warn(msg);
-                }
-            },
-            /**
-             *
-             * @param {object} o
-             * @returns {object}
-             */
-            resolveOptions = function (o) {
-                var r,
-                    e;
-
-                if (typeof o !== 'object' || o === null) {
-                    r = default_options;
-                } else {
-                    r = {
-                        expires: default_options.expires,
-                        path: default_options.path,
-                        domain: default_options.domain,
-                        secure: default_options.secure
-                    };
-
-                    /*
-                     * I've been very finicky about the name and format of the expiration option over time,
-                     * so I'm accounting for older styles to maintain backwards compatibility. Preferably it
-                     * will be called "expires" and will be an instance of Date
-                     */
-                    if (typeof o.expires === 'object' && o.expires instanceof Date) {
-                        r.expires = o.expires;
-                    } else if (typeof o.expires_at === 'object' && o.expires_at instanceof Date) {
-                        r.expires = o.expires_at;
-                        warn('Cookie option "expires_at" has been deprecated. Rename to "expires". Support for "expires_at" will be removed in a version to come.');
-                    } else if (typeof o.expiresAt === 'object' && o.expiresAt instanceof Date) {
-                        r.expires = o.expiresAt;
-                        warn('Cookie option "expiresAt" has been deprecated. Rename to "expires". Support for "expiresAt" will be removed in a version to come.');
-                    } else if (typeof o.hoursToLive === 'number' && o.hoursToLive !== 0) {
-                        e = new Date();
-                        e.setTime(e.getTime() + (o.hoursToLive * 60 * 60 * 1000));
-                        r.expires = e;
-                        warn('Cookie option "hoursToLive" has been deprecated. Rename to "expires" and prodvide a Date instance (see documentation). Support for "hoursToLive" will be removed in a version to come.');
-                    }
-
-                    if (typeof o.path === 'string' && o.path !== '') {
-                        r.path = o.path;
-                    }
-
-                    if (typeof o.domain === 'string' && o.domain !== '') {
-                        r.domain = o.domain;
-                    }
-
-                    if (o.secure === true) {
-                        r.secure = o.secure;
-                    }
-                }
-
-                return r;
-            },
-            /**
-             *
-             * @access private
-             * @param {object} o
-             * @returns {string}
-             */
-            cookieOptions = function (o) {
-                o = resolveOptions(o);
-
-                return ([
-                    (typeof o.expires === 'object' && o.expires instanceof Date ? '; expires=' + o.expires.toGMTString() : ''),
-                    ('; path=' + o.path),
-                    (typeof o.domain === 'string' ? '; domain=' + o.domain : ''),
-                    (o.secure === true ? '; secure' : '')
-                ].join(''));
-            },
-            /**
-             *
-             * @access private
-             * @param {string} s
-             * @returns {string}
-             */
-            trim = (function () {
-                var trim_def;
-
-                /* Some logic for `trim` and `isNaN` borrowed from http://jquery.com/ */
-                if (String.prototype.trim) {
-                    trim_def = function (s) {
-                        return String.prototype.trim.call(s);
-                    };
-                } else {
-                    trim_def = (function () {
-                        var l,
-                            r;
-
-                        l = /^\s+/;
-                        r = /\s+$/;
-
-                        return function (s) {
-                            return s.replace(l, '').replace(r, '');
-                        };
-                    }());
-                }
-
-                return trim_def;
-            }()),
-            /**
-             *
-             * @access private
-             * @param {mixed} v
-             * @returns {boolean}
-             */
-            isNaN = (function () {
-                var p = /\d/,
-                    native_isNaN = scope.isNaN;
-
-                return function (v) {
-                    return (v === null || !p.test(v) || native_isNaN(v));
-                };
-            }()),
-            /**
-             *
-             * @access private
-             * @returns {object}
-             */
-            parseCookies = (function () {
-                var parseJSON,
-                    p;
-
-                if (JSON && typeof JSON.parse === 'function') {
-                    parseJSON = function (s) {
-                        var r = null;
-
-                        if (typeof s === 'string' && s !== '') {
-                            s = trim(s);
-
-                            if (s !== '') {
-                                try {
-                                    r = JSON.parse(s);
-                                } catch (e1) {
-                                    r = null;
-                                }
-                            }
-                        }
-
-                        return r;
-                    };
-                } else {
-                    parseJSON = function () {
-                        return null;
-                    };
-                }
-
-                p = new RegExp('^(?:\\{.*\\}|\\[.*\\])$');
-
-                return function () {
-                    var c = {},
-                        s1 = document.cookie.split(';'),
-                        q = s1.length,
-                        i,
-                        s2,
-                        n,
-                        v,
-                        vv;
-
-                    for (i = 0; i < q; i += 1) {
-                        s2 = s1[i].split('=');
-
-                        n = trim(s2.shift());
-                        if (s2.length >= 1) {
-                            v = s2.join('=');
-                        } else {
-                            v = '';
-                        }
-
-                        try {
-                            vv = decodeURIComponent(v);
-                        } catch (e2) {
-                            vv = v;
-                        }
-
-                        /* Logic borrowed from http://jquery.com/ dataAttr method */
-                        try {
-                            vv = (vv === 'true')
-                                ? true : (vv === 'false')
-                                    ? false : !isNaN(vv)
-                                        ? parseFloat(vv) : p.test(vv)
-                                            ? parseJSON(vv) : vv;
-                        } catch (ignore) {}
-
-                        c[n] = vv;
-                    }
-
-                    return c;
-                };
-            }());
-
-        return {
-            /**
-             * get - get one, several, or all cookies
-             *
-             * @access public
-             * @static
-             * @param {mixed} n {string} name of single cookie
-             *                  {array} list of multiple cookie names
-             *                  {void} if you want all cookies
-             * @return {mixed} type/value of cookie as set
-             *                 {null} if only one cookie is requested and is not found
-             *                 {object} hash of multiple or all cookies (if multiple or all requested)
-             */
-            get: function (n) {
-                var r,
-                    i,
-                    c = parseCookies();
-
-                if (typeof n === 'string') {
-                    r = (c[n] !== undef) ? c[n] : null;
-                } else if (typeof n === 'object' && n !== null) {
-                    r = {};
-
-                    for (i in n) {
-                        if (Object.prototype.hasOwnProperty.call(n, i)) {
-                            if (c[n[i]] !== undef) {
-                                r[n[i]] = c[n[i]];
-                            } else {
-                                r[n[i]] = null;
-                            }
-                        }
-                    }
-                } else {
-                    r = c;
-                }
-
-                return r;
-            },
-            /**
-             * filter - get array of cookies whose names match the provided RegExp
-             *
-             * @access public
-             * @static
-             * @param {RegExp} p The regular expression to match against cookie names
-             * @return {object} hash of cookies whose names match the RegExp
-             */
-            filter: function (p) {
-                var n,
-                    r = {},
-                    c = parseCookies();
-
-                if (typeof p === 'string') {
-                    p = new RegExp(p);
-                }
-
-                for (n in c) {
-                    if (Object.prototype.hasOwnProperty.call(c, n) && n.match(p)) {
-                        r[n] = c[n];
-                    }
-                }
-
-                return r;
-            },
-            /**
-             * set - set or delete a cookie with desired options
-             *
-             * @access public
-             * @static
-             * @param {string} n name of cookie to set
-             * @param {mixed} v Any JS value. If not a string, will be JSON encoded (http://code.google.com/p/cookies/wiki/JSON)
-             *                  {null} to delete
-             * @param {object} o optional list of cookie options to specify
-             * @return {void}
-             */
-            set: function (n, v, o) {
-                if (typeof o !== 'object' || o === null) {
-                    o = {};
-                }
-
-                if (v === undef || v === null) {
-                    v = '';
-                    o.expires = new Date();
-                    o.expires.setFullYear(1978);
-                } else {
-                    /* Logic borrowed from http://jquery.com/ dataAttr method and reversed */
-                    v = (v === true)
-                        ? 'true' : (v === false)
-                            ? 'false' : !isNaN(v)
-                                ? String(v) : v;
-
-                    if (typeof v !== 'string') {
-                        if (typeof JSON === 'object' && JSON !== null && typeof JSON.stringify === 'function') {
-                            v = JSON.stringify(v);
-                        } else {
-                            throw new Error('cookies.set() could not be serialize the value');
-                        }
-                    }
-                }
-
-                document.cookie = n + '=' + encodeURIComponent(v) + cookieOptions(o);
-            },
-            /**
-             * del - delete a cookie (domain and path options must match those with which the cookie was set; this is really an alias for set() with parameters simplified for this use)
-             *
-             * @access public
-             * @static
-             * @param {mixed} n {string} name of cookie to delete
-             *                  {boolean} true to delete all
-             * @param {object} o optional list of cookie options to specify (path, domain)
-             * @return {void}
-             */
-            del: function (n, o) {
-                var d = {},
-                    i;
-
-                if (typeof o !== 'object' || o === null) {
-                    o = {};
-                }
-
-                if (typeof n === 'boolean' && n === true) {
-                    d = this.get();
-                } else if (typeof n === 'string') {
-                    d[n] = true;
-                }
-
-                for (i in d) {
-                    if (Object.prototype.hasOwnProperty.call(d, i) && typeof i === 'string' && i !== '') {
-                        this.set(i, null, o);
-                    }
-                }
-            },
-            /**
-             * test - test whether the browser is accepting cookies
-             *
-             * @access public
-             * @static
-             * @return {boolean}
-             */
-            test: function () {
-                var r = false,
-                    n = 'test_cookies_jaaulde_js',
-                    v = 'data';
-
-                this.set(n, v);
-
-                if (this.get(n) === v) {
-                    this.del(n);
-                    r = true;
-                }
-
-                return r;
-            },
-            /**
-             * setOptions - set default options for calls to cookie methods
-             *
-             * @access public
-             * @static
-             * @param {object} o list of cookie options to specify
-             * @return {void}
-             */
-            setOptions: function (o) {
-                if (typeof o !== 'object') {
-                    o = null;
-                }
-
-                default_options = resolveOptions(o);
-            }
-        };
-    }));
-}(this));
-    </script>
-    <script>
-
-      $('.colors-picker').spectrum({
-        allowEmpty:true,
-        showInitial: true,
-        showInput: true,
-        locale: "fr",
-        chooseText: "OK!",
-      });
-
-
-      $( ".tbg" ).css('background-color',cookies.get('mainbg'));
-      $( "#color1" ).css('background-color',cookies.get('mainbg'));
-
-      $( "#color2" ).css('background-color',cookies.get('tab1Color'));
-      $('.tab1-square').css('background-color',cookies.get('tab1Color'));
-
-      $( "#color3" ).css('background-color',cookies.get('tab2Color'));
-      $('.tab2-square').css('background-color',cookies.get('tab2Color'));
-
-      $( "#color4" ).css('background-color',cookies.get('tab3Color'));
-      $('.tab3-square').css('background-color',cookies.get('tab3Color'));
-
-      $( "#color5" ).css('background-color',cookies.get('tab4Color'));
-      $('.tab4-square').css('background-color',cookies.get('tab4Color'));
-
-      $( "#text-color1" ).css('background-color',cookies.get('text-color1'));
-      $('.tab1').css('color',cookies.get('text-color1'));
-
-      $( "#text-color2" ).css('background-color',cookies.get('text-color2'));
-      $('.tab2').css('color',cookies.get('text-color2'));
-
-      $( "#text-color3" ).css('background-color',cookies.get('text-color3'));
-      $('.tab3').css('color',cookies.get('text-color3'));
-
-      $( "#text-color4" ).css('background-color',cookies.get('text-color4'));
-      $('.tab4').css('color',cookies.get('text-color4'));
-
-      $( "#color1" ).change(function() {
-        $(this).css('background-color',$(this).val());
-        $('.tbg').css('background-color',$(this).val());
-        cookies.set('mainbg', $(this).val());
-      });
-
-      $( "#color2" ).change(function() {
-        $(this).css('background-color',$(this).val());
-        $('.tab1-square').css('background-color',$(this).val());
-
-        cookies.set('tab1Color', $(this).val());
-      });
-
-      $( "#color3" ).change(function() {
-        $(this).css('background-color',$(this).val());
-        $('.tab2-square').css('background-color',$(this).val());
-
-        cookies.set('tab2Color', $(this).val());
-      });
-
-      $( "#color4" ).change(function() {
-        $(this).css('background-color',$(this).val());
-        $('.tab3-square').css('background-color',$(this).val());
-
-        cookies.set('tab3Color', $(this).val());
-      });
-
-      $( "#color5" ).change(function() {
-        $(this).css('background-color',$(this).val());
-        $('.tab4-square').css('background-color',$(this).val());
-
-        cookies.set('tab4Color', $(this).val());
-      });
-
-      $( "#text-color1" ).change(function() {
-        $(this).css('background-color',$(this).val());
-        $('.tab1').css('color',$(this).val());
-
-        cookies.set('text-color1', $(this).val());
-      });
-
-      $( "#text-color2" ).change(function() {
-        $(this).css('background-color',$(this).val());
-        $('.tab2').css('color',$(this).val());
-
-        cookies.set('text-color2', $(this).val());
-      });
-
-      $( "#text-color3" ).change(function() {
-        $(this).css('background-color',$(this).val());
-        $('.tab3').css('color',$(this).val());
-
-        cookies.set('text-color3', $(this).val());
-      });
-
-      $( "#text-color4" ).change(function() {
-        $(this).css('background-color',$(this).val());
-        $('.tab4').css('color',$(this).val());
-
-        cookies.set('text-color4', $(this).val());
-      });
-
-
-    </script>
-
-   
-    <script src="js/script.js"></script>
+    <script src='https://dev3.invacont.net/test57/js/jaaulde-cookies.js'></script>
+    <script src='js/colors.js'></script>
+    <script src='js/script.js'></script>
 
 
   </body>
