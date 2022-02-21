@@ -89,10 +89,11 @@
 
 .left-list .btn {
 	max-width: 120px;
-	min-height: 30px;
-	font-size: 12px;
-	margin: 0 auto;
-	margin-top: 10px;
+    min-height: 30px;
+    font-size: 12px;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 7px 0;
 }
 
 .left-list .btn, .right-list .btn {
