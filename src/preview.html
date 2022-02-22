@@ -837,24 +837,27 @@
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.1.5/html2canvas.min.js"></script>
     <script type="text/javascript" src="https://dev3.invacont.net/file/jsPdf.debug.js"></script>
-
+    <!--
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.0.272/jspdf.debug.js"></script>
+-->
 <!--
     <script type="text/javascript" src="js/html2canvas.js"></script>
     <script type="text/javascript" src="js/jsPdf.debug.js"></script>-->
-    <!--<script type="text/javascript" src="js/jsPdf.debug.js"></script>-->
     <script type="text/javascript">
   
      $( window ).on( "load", function() {
       $(document).ready(function() {
-/*
-        var w = document.getElementById("preview-block").clientWidth;
-        var h = document.getElementById("preview-block").clientHeight;
-     */
+
         html2canvas(document.querySelector("#preview-block")).then(canvas => {
           /*document.body.appendChild(canvas);*/
           var img = canvas.toDataURL("image/jpeg", 1);
           var doc = new jsPDF('L', 'px', ['595.28', '5710']);
-          doc.addImage(img, 'JPEG', 0, 0, '595.28', '5710');
+          doc.setFillColor(248,248,248);
+          doc.rect(0, 0, 595.28, 5710, "F");
+
+          doc.addImage(img, 'JPEG', 107.64, 0, 380, 5710);
+
+         
           doc.save('your-app-design.pdf');
         });
     
