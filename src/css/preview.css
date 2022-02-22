@@ -14,6 +14,7 @@
 	padding: 30px 50px 50px 60px;
 }
 
+
 .tw100 {
 	width: 100%;
 	display: flex;
@@ -27,12 +28,28 @@
 }
 
 .previewshow {
-	max-width: 595.28px;
+	/*max-width: 595.28px;*/
+	max-width: 380px;
 	display: block;
 	position: relative;
 	height: auto;
 	overflow: auto;
 	margin: 0 auto;
+}
+
+.previewshow #first:after {
+	content: '';
+	position: absolute;
+	z-index: 2000;
+	width: 100%;
+	height: 20px;
+	background: #f8f8f8;
+	top: -15px;
+	left: 0;
+}
+
+.previewshow .template-block {
+	background: #f8f8f8;
 }
 
 .previewshow .cont2 {
