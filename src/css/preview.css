@@ -52,12 +52,25 @@
 	background: #f8f8f8;
 }
 
+.previewshow .template {
+	width: 237.5px;
+}
+
 .previewshow .cont2 {
-	padding: 0 19px 15px 19px;
+	z-index: 2000;
+	height: 474px;
+    width: 238.5px;
+    left: -1px;
+	/*padding: 0 19px 15px 19px;*/
+	padding: 0 19px 20px 20px;
 }
 
 .previewshow .pother {
-    padding: 0 21px 18px 18px;
+	height: 471px;
+    width: 239.5px;
+    left: -1px;
+    /*padding: 0 21px 18px 18px;*/
+    padding: 0 22px 20px 18px;
 }
 
 .preview-block .closebtn {
