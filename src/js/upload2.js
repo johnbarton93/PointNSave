@@ -61,7 +61,7 @@ $(document).ready(function(){
     if(localStorage.getItem("applogo")) {
       $('.small-logo').find('img').remove();
     } else {
-        $('.small-logo').append('<img src="img/logo2.jpg" alt="logo 2" />');
+        $('.small-logo').append('<img src="https://www.pointnsave.com/img/logo2.jpg" alt="logo 2" />');
     }
 
     $('.template-logo').find('img').remove();
