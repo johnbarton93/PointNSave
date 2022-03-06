@@ -269,6 +269,10 @@ header {
   pointer-events: none;
 }
 
+.fin-page .breadcrumbs li:last-child a {
+  pointer-events: auto;
+}
+
 .breadcrumbs li {
   position: relative;
   margin-top: 17px;
