@@ -39,6 +39,20 @@
                     <div class="tpad">
                       <div id="tlogo1" class="template-logo">
                       </div>
+                      <div class="options opt-bot">
+                        <div class="option opt1-square">
+                          <p>Map</p>
+                        </div>
+                        <div class="option opt2-square">
+                          <p>Events</p>
+                        </div>
+                        <div class="option opt3-square">
+                          <p>Resources</p>
+                        </div>
+                        <div class="option opt4-square">
+                          <p>Directory</p>
+                        </div>
+                      </div>
                       <div class="squares squares2">
                         <div class="square tab1-square">
                           <p class="tab-name tab1">Tab 1</p>
@@ -60,6 +74,20 @@
                     <div class="tpad">
                       <div id="tlogo2" class="template-logo">
                       </div>
+                      <div class="options opt-bot">
+                        <div class="option opt1-square">
+                          <p>Map</p>
+                        </div>
+                        <div class="option opt2-square">
+                          <p>Events</p>
+                        </div>
+                        <div class="option opt3-square">
+                          <p>Resources</p>
+                        </div>
+                        <div class="option opt4-square">
+                          <p>Directory</p>
+                        </div>
+                      </div>
                       <div class="squares">
                         <div class="square burger">
                           <div class="blines">
@@ -75,6 +103,20 @@
                   <div class="template3-cont cont">
                     <div class="tpad">
                       <div id="tlogo3" class="template-logo">
+                      </div>
+                      <div class="options opt-top">
+                        <div class="option opt1-square">
+                          <p>Map</p>
+                        </div>
+                        <div class="option opt2-square">
+                          <p>Events</p>
+                        </div>
+                        <div class="option opt3-square">
+                          <p>Resources</p>
+                        </div>
+                        <div class="option opt4-square">
+                          <p>Directory</p>
+                        </div>
                       </div>
                       <div class="squares w100">
                         <div class="square tab1-square">
@@ -96,6 +138,20 @@
                   <div class="template4-cont cont">
                     <div class="tpad">
                       <div id="tlogo4" class="template-logo">
+                      </div>
+                      <div class="options opt-top">
+                        <div class="option opt1-square">
+                          <p>Map</p>
+                        </div>
+                        <div class="option opt2-square">
+                          <p>Events</p>
+                        </div>
+                        <div class="option opt3-square">
+                          <p>Resources</p>
+                        </div>
+                        <div class="option opt4-square">
+                          <p>Directory</p>
+                        </div>
                       </div>
                       <div class="squares squares4">
                         <div class="square tab1-square">
@@ -820,7 +876,7 @@
     <script src='js/colors.js'></script>
     <script src='js/colorsaddons.js'></script>
 
-    <script>
+    <script async>
       $(document).ready(function(){
         $('#prevbtn').on('click', function(e) {
           $('#preview-block').addClass('open');
@@ -839,27 +895,28 @@
     <script type="text/javascript" src="https://dev3.invacont.net/file/jsPdf.debug.js"></script>
     <!--
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.0.272/jspdf.debug.js"></script>
--->
-<!--
+    -->
+    <!--
     <script type="text/javascript" src="js/html2canvas.js"></script>
     <script type="text/javascript" src="js/jsPdf.debug.js"></script>-->
     <script type="text/javascript">
   
-     $( window ).on( "load", function() {
+     $(window).on( "load", function() {
       $(document).ready(function() {
-
-        html2canvas(document.querySelector("#preview-block")).then(canvas => {
-          /*document.body.appendChild(canvas);*/
+/*
+          html2canvas(document.querySelector("#preview-block")).then(canvas => {
+  
           var img = canvas.toDataURL("image/jpeg", 1);
-          var doc = new jsPDF('L', 'px', ['595.28', '5710']);
+          var doc = new jsPDF('L', 'px', ['595.28', '4508']);
           doc.setFillColor(248,248,248);
           doc.rect(0, 0, 595.28, 5710, "F");
 
-          doc.addImage(img, 'JPEG', 107.64, 0, 380, 5710);
+          doc.addImage(img, 'JPEG', 147.64, 0, 300, 4508);
 
-         
           doc.save('your-app-design.pdf');
-        });
+
+        });*/
+
     
       });
     });
