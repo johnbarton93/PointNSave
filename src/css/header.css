@@ -266,11 +266,7 @@ header {
 
 .breadcrumbs li:last-child a {
   font-family: 'HelveticaNeueLTStd-Bd';
-  pointer-events: none;
-}
-
-.fin-page .breadcrumbs li:last-child a {
-  pointer-events: auto;
+  /*pointer-events: none;*/
 }
 
 .breadcrumbs li {
