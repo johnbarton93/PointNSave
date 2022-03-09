@@ -1289,9 +1289,6 @@
               var pdf = new Blob([ doc2.output('blob') ], { type : 'application/pdf'});
               var fd = new FormData();
 
-              
-              const handleSubmit = (e) => {
-                  e.preventDefault();
                   let myForm = document.getElementById("contactForm");
                   let formData = new FormData(myForm);
 
@@ -1308,7 +1305,7 @@
                   })
                     .then(() => console.log("Form successfully submitted"))
                     .catch((error) => alert(error));
-                };
+              
             /*
 
               $.ajax({
