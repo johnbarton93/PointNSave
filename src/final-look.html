@@ -1277,43 +1277,23 @@
               doc2.addImage(localStorage.getItem('img11'), 'JPEG', 212.64, 3120, 170, 305, "alias11", 'SLOW');
 
               var file_name = String(Date.now());
-
+              /*var file_name = "mynewfile";*/
               var firstname = $("#firstname").val(),
                 email = $("#email").val(),
                 message = $("#message").val();
-
-                document
-                  .querySelector("form")
-                  .addEventListener("submit", handleSubmit);
       
               var pdf = new Blob([ doc2.output('blob') ], { type : 'application/pdf'});
               var fd = new FormData();
 
-              
-              const handleSubmit = (e) => {
-                 /* e.preventDefault();*/
-                  let myForm = document.getElementById("contactForm");
-                  let formData = new FormData(myForm);
-
-                  formData.append('data', pdf);
-                  formData.append('filename', file_name);
-                  formData.append('firstname', firstname);
-                  formData.append('email', email);
-                  formData.append('message', message);
-
-                  fetch("php/form-process.php", {
-                    method: "POST",
-                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                    body: new URLSearchParams(formData).toString(),
-                  })
-                    .then(() => console.log("Form successfully submitted"))
-                    .catch((error) => alert(error));
-                };
-            /*
+              fd.append('data', pdf);
+              fd.append('filename', file_name);
+              fd.append('firstname', firstname);
+              fd.append('email', email);
+              fd.append('message', message);
 
               $.ajax({
                   type: "POST",
-                  url: "php/form-process.php",
+                  url: "https://dev3.invacont.net/pointnsave-final/php/form-process2.php",
 
                   data: fd,
                   processData: false,
@@ -1328,7 +1308,6 @@
                   }
               });
               localStorage.setItem('pdfBase64', pdf);
-              */
             });   
       }
 
