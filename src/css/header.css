@@ -787,6 +787,22 @@ header {
   color: #fff;
 }
 
+.func.prompt .close-icon {
+  display: none;
+}
+
+.func.prompt .close-icon {
+  fill: #fff;
+}
+
+.func.prompt.sel .i-icon {
+  display: none;
+}
+
+.func.prompt.sel .close-icon {
+  display: block;
+}
+
 .delicon.sel, .func.sel {
   background: #b71f2a;
   border: 1px solid #b71f2a;
