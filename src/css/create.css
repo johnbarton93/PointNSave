@@ -137,8 +137,8 @@
 
 .square p {
 	line-height: 1.3;
-	word-wrap: break-word;
-    word-break: break-all;
+	/*word-wrap: break-word;
+    word-break: break-all;*/
 }
 
 .square.hide {
