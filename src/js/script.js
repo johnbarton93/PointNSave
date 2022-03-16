@@ -104,7 +104,7 @@ $(document).ready(function(){
   var tab27Text = 'Governmant / Military';
   var tab28Text = 'Student';
   var tab29Text = 'Other';
-  var tab30Text = 'Appliation Name here';
+  var tab30Text = 'Application Name here';
 
   var tab31Text = 'COMMUNITY GUIDE';
   var tab32Text = 'RESOURCES INFORMATION';
