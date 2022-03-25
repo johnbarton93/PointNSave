@@ -17,7 +17,13 @@
   <link rel="stylesheet" href="css/colors.css">
   <link rel="icon" href="img/favicon.png" type="image/x-icon" />
 </head>
+
   <body class="feat-page fin-page">
+
+    <div class="preloader-block">
+      <div class="preloader"></div>
+      <p>Wait please...</p>
+    </div>
 
     <div id="final-hid" class="final-hid">
 
@@ -242,6 +248,15 @@
           <div class="tpad">
             <p class="addons-title tab5">events</p>
             <img src="img/addons12.png" alt="add-ons image 1" />
+            <div class="date1 btn-date btn7">
+              <p><strong>2</strong><br>Sep</p>
+            </div>
+            <div class="date2 btn-date btn7">
+              <p><strong>4</strong><br>Sep</p>
+            </div>
+            <div class="date3 btn-date btn7">
+              <p><strong>17</strong><br>Sep</p>
+            </div>
           </div>
         </div>
       </div>
@@ -1196,7 +1211,9 @@
         $(document).ready(function() {
 
           $('#download-btn').on('click', function(e) {
+            $('.preloader-block').addClass('show');
             html2canvas(document.querySelector(".name")).then(canvas => {
+              
               var doc = new jsPDF('L', 'px', ['595.28', '3520']);
               doc.setFillColor(248,248,248);
               doc.rect(0, 0, 595.28, 3520, "F");
@@ -1220,7 +1237,10 @@
 
               /*doc.addImage(img, 'JPEG', 212.64, 3410, 72, 65, "alias12", 'SLOW');*/
 
-              doc.save('your-app-design.pdf');
+              var p =doc.save('your-app-design.pdf');
+              if(!p) {
+                $('.preloader-block').removeClass('show');
+              }
 
               
             });
@@ -1239,6 +1259,8 @@
           }
       });
 
+      var test = 0;
+
        $('#form-submit').on('click', function(e) {
 
           var email = $('#email').val();
@@ -1247,12 +1269,15 @@
           $(".req").each(function(index) {
               if ($(this).val() == '') {
                   $(this).css('border', '1px solid red');
+                  test = 0;
               } else {
                   if($(this).attr('id')=='email') {
                       if(pattern.test(email)) {
                          $('#email').css('border', '1px solid #f3cbcb');  
+                         test = 1;
                        } else {
                          $('#email').css('border', '1px solid red');
+                         test = 0;
                       }
                   } 
                   else {
@@ -1266,6 +1291,11 @@
       function submitForm(){
 
             html2canvas(document.querySelector(".name")).then(canvas => {
+
+              if(test==1) {
+                 $('.preloader-block').addClass('show');
+              }
+
               var doc2 = new jsPDF('L', 'px', ['595.28', '3520']);
               doc2.setFillColor(248,248,248);
               doc2.rect(0, 0, 595.28, 3520, "F");
@@ -1298,6 +1328,9 @@
               fd.append('firstname', firstname);
               fd.append('email', email);
               fd.append('message', message);
+              
+
+              /*$('.preloader-block').addClass('show');*/
 
               $.ajax({
                   type: "POST",
@@ -1321,6 +1354,7 @@
 
       function formSuccess(){
           $("#contactForm")[0].reset();
+          $('.preloader-block').removeClass('show');
           submitMSG(true, "Thank you. We'll contact you soon!")
       }
 
