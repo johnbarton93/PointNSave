@@ -16,7 +16,14 @@
   <link rel="stylesheet" href="css/colors.css">
   <link rel="icon" href="img/favicon.png" type="image/x-icon" />
 </head>
+
   <body>
+
+  <div class="preloader-block">
+    <div class="preloader"></div>
+    <p>Wait please...</p>
+  </div>
+
 
     <header>
       <div class="container fl">
@@ -329,6 +336,15 @@
                         <div class="tpad">
                           <p class="addons-title tab5">events</p>
                           <img src="img/addons12.png" alt="add-ons image 1" />
+                          <div class="date1 btn-date btn7">
+                            <p><strong>2</strong><br>Sep</p>
+                          </div>
+                          <div class="date2 btn-date btn7">
+                            <p><strong>4</strong><br>Sep</p>
+                          </div>
+                          <div class="date3 btn-date btn7">
+                            <p><strong>17</strong><br>Sep</p>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -1237,68 +1253,58 @@
           /*$('body').append('<img src="'+localStorage.getItem('img1')+'" alt="">');*/
 
           $('.var').on('click', function(e) {
+              $('.preloader-block').addClass('show');
+
               $('html').scrollTop(0);
               var clickId  = $(this).attr('id');
 
               const promise2 = html2canvas(document.querySelector("#screen2")).then(canvas => {
                   var img2 = canvas.toDataURL("image/png", 1);
                   localStorage.setItem('img2', img2);
-                  /*$('body').append('<img src="'+img2+'" alt="">');*/
               });
 
               const promise3 =html2canvas(document.querySelector("#screen3")).then(canvas => {
                   var img3 = canvas.toDataURL("image/png", 1);
                   localStorage.setItem('img3', img3);
-                 /* $('body').append('<img src="'+img3+'" alt="">');*/
               });
 
               const promise4 = html2canvas(document.querySelector("#screen4")).then(canvas => {
                   var img4 = canvas.toDataURL("image/png", 1);
                   localStorage.setItem('img4', img4);
-                  /*$('body').append('<img src="'+img4+'" alt="">');*/
               });
 
               const promise5 = html2canvas(document.querySelector("#screen5")).then(canvas => {
                   var img5 = canvas.toDataURL("image/png", 1);
                   localStorage.setItem('img5', img5);
-                  /*$('body').append('<img src="'+img5+'" alt="">');*/
               });
 
               const promise6 = html2canvas(document.querySelector("#screen6")).then(canvas => {
                   var img6 = canvas.toDataURL("image/png", 1);
                   localStorage.setItem('img6', img6);
-                  /*$('body').append('<img src="'+img6+'" alt="">');*/
               });
 
               const promise7 = html2canvas(document.querySelector("#screen7")).then(canvas => {
                   var img7 = canvas.toDataURL("image/png", 1);
                   localStorage.setItem('img7', img7);
-                  /*$('body').append('<img src="'+img7+'" alt="">');*/
               });
 
               const promise8 = html2canvas(document.querySelector("#screen8")).then(canvas => {
                   var img8 = canvas.toDataURL("image/png", 1);
                   localStorage.setItem('img8', img8);
-                  /*('body').append('<img src="'+img8+'" alt="">');*/
               });
 
               const promise9 = html2canvas(document.querySelector("#screen9")).then(canvas => {
                   var img9 = canvas.toDataURL("image/png", 1);
                   localStorage.setItem('img9', img9);
-                  /*$('body').append('<img src="'+img9+'" alt="">');*/
               });
 
               const promise10 = html2canvas(document.querySelector("#screen10")).then(canvas => {
                   var img10 = canvas.toDataURL("image/png", 1);
                   localStorage.setItem('img10', img10);
-                  /*$('body').append('<img src="'+img10+'" alt="">');*/
               });
 
               const promise11 = html2canvas(document.querySelector("#screen11")).then(canvas => {
                   var img11 = canvas.toDataURL("image/png", 1);
-                  localStorage.setItem('img11', img11);
-                  /*$('body').append('<img src="'+img11+'" alt="">');*/
-
               });
 
               Promise.all([promise2, promise3, promise4, promise5, promise6, promise7, promise8, promise9, promise10, promise11]).then((values) => {
@@ -1319,6 +1325,8 @@
                     window.location.href = "final-look.html";
                   }
               });
+
+
             });
         });
       });
