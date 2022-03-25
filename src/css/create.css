@@ -363,3 +363,35 @@
     word-wrap: break-word;
     word-break: break-all;
 }
+
+
+.btn-date {
+    position: absolute;
+    z-index: 500;
+    width: 51px;
+    background: #093274;
+    left: 15px;
+    height: 48px;
+    border-bottom-left-radius: 7px;
+}
+
+.btn-date p {
+    position: relative;
+    top: 10px;
+    font-size: 13px;
+    line-height: 1.1;
+    color: #fff;
+    text-align: center;
+}
+
+.date1 {
+   top: 136px;
+}
+
+.date2 {
+   top: 259px;
+}
+
+.date3 {
+   top: 383px;
+}
