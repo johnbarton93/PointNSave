@@ -1222,11 +1222,25 @@ header {
   margin: 0 auto;
 }
 
+.feat-page .screen.top0 {
+  top: 0;
+}
+
+.feat-page .chclass .chtitle {
+  position: relative;
+  z-index: 15000;
+  margin-top: 0;
+}
+
 .feat-page .template-block.right {
   top: auto;
 }
 
 @media(max-width: 960px) {
+  .feat-page .screen.top0 {
+    top: -16px;
+  }
+  .feat-page .chclass .chtitle {top: -15px;}
   .screen {
     margin: 0 auto;
   }
@@ -1285,5 +1299,4 @@ header {
           transform: rotate(360deg);
         }
     }
-
 
