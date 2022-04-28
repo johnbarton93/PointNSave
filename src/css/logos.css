@@ -104,4 +104,10 @@
    .logos {
        justify-content: center;
    }
+   .logo:first-child {
+       border-top: 1px solid #cdcdcd;
+   }
+    .logo:last-child {
+       border-bottom: 1px solid #cdcdcd;
+   }
 }
