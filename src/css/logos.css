@@ -12,8 +12,8 @@
     height: 220px;
     align-items: center;
     justify-content: center;
-    border-right: 1px solid #cdcdcd;
-    border-top: 1px solid #cdcdcd;
+    border-right: 1px solid #fff;
+    border-top: 1px solid #fff;
     padding: 15px 20px;
 }
 
@@ -40,13 +40,13 @@
         width: 25%;
     }
     .logo:nth-child(5n) {
-        border-right: 1px solid #cdcdcd;
+        border-right: 1px solid #fff;
     }
     .logo:nth-child(4n) {
         border-right: 0;
     }
     .logo:nth-child(5) {
-        border-top: 1px solid #cdcdcd;
+        border-top: 1px solid #fff;
     }
     .empty:nth-last-child(-n+3) {
         display: none;
@@ -58,13 +58,13 @@
         width: 33.3333%;
     }
     .logo:nth-child(4n) {
-        border-right: 1px solid #cdcdcd;
+        border-right: 1px solid #fff;
     }
     .logo:nth-child(3n) {
         border-right: 0;
     }
     .logo:nth-child(4) {
-        border-top: 1px solid #cdcdcd;
+        border-top: 1px solid #fff;
     }
     .logo.empty:nth-last-child(3) {
        display: block;
@@ -76,13 +76,13 @@
         width: 50%;
     }
     .logo:nth-child(3n) {
-        border-right: 1px solid #cdcdcd;
+        border-right: 1px solid #fff;
     }
     .logo:nth-child(2n) {
         border-right: 0;
     }
     .logo:nth-child(3) {
-        border-top: 1px solid #cdcdcd;
+        border-top: 1px solid #fff;
     }
     .logo.empty:nth-last-child(3) {
         display: none;
@@ -99,15 +99,15 @@
        display: none;
    }
    .logo:nth-child(2) {
-      border-top: 1px solid #cdcdcd;
+      border-top: 1px solid #fff;
    }
    .logos {
        justify-content: center;
    }
    .logo:first-child {
-       border-top: 1px solid #cdcdcd;
+       border-top: 1px solid #fff;
    }
   .logos {
-       border-bottom: 1px solid #cdcdcd;
+       border-bottom: 1px solid #fff;
    }
 }
